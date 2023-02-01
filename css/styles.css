@@ -1,4 +1,280 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serife;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  border-bottom: 2px solid #16507b;
+  display: flex;
+}
+
+.center {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  width: 30%;
+  padding: 15px 0 15px 15px;
+}
+
+.menu {
+  width: 100%;
+  text-align: right;
+  margin: 50px 15px 0 0;
+}
+
+.menu a {
+  color: #124265;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.menu a:not(:last-child) {
+  margin-right: 20px;
+}
+
+.menu a:hover {
+  color: #ffa500;
+}
+
+/* Carrocel */
+.carrocel {
+  margin: 0 auto;
+  width: 100%;
+  height: 544px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 400%;
+  height: 400px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 25%;
+  position: relative;
+  transition: 2s;
+}
+
+.slide img {
+  width: 100%;
+  height: 500px;
+}
+
+.navegacao-auto {
+  position: absolute;
+  width: 100%;
+  margin-top: 360px;
+  display: flex;
+  justify-content: center;
+}
+
+.navegacao-manual {
+  position: absolute;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.navegacao-auto div {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+  margin-top: 90px;
+}
+
+.manual-btn {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 25px;
+}
+
+.manual-btn:hover {
+  background-color: #fff;
+}
+
+#radio1:checked ~ .partida {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .partida {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .partida {
+  margin-left: -50%;
+}
+
+#radio4:checked ~ .partida {
+  margin-left: -75%;
+}
+
+.navegacao-auto div:not(:last-child) {
+  margin-right: 25px;
+}
+
+#radio1:checked ~ .navegacao-auto .auto-btn1 {
+  background-color: #fff;
+}
+#radio2:checked ~ .navegacao-auto .auto-btn2 {
+  background-color: #fff;
+}
+#radio3:checked ~ .navegacao-auto .auto-btn3 {
+  background-color: #fff;
+}
+#radio4:checked ~ .navegacao-auto .auto-btn4 {
+  background-color: #fff;
+}
+
+/* Section man */
+section.main {
+  background-image: url('../img/background.jpg');
+  min-height: 800px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.titulo h2 {
+  width: 100%;
+  text-align: center;
+  color: #16507b;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.main-texto {
+  width: 100%;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.main-texto p {
+  color: #000;
+  font-size: 18px;
+  margin: 40px 0;
+}
+
+.colunas {
+  display: flex;
+}
+
+.coluna-texto:not(:last-child) {
+  margin-right: 3%;
+}
+
+.coluna-texto {
+  width: 25%;
+  background-color: #ffffff;
+  padding: 10px 25px;
+  border-radius: 10px;
+  margin-bottom: 100px;
+}
+
+.coluna-texto:hover {
+  box-shadow: 0 0 1em #808080;
+  transition: 0.75s;
+  transform: scale(1.05);
+}
+
+.coluna-texto span {
+  color: #16507b;
+  font-size: 70px;
+}
+
+.coluna-texto h2 {
+  color: #124265;
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.coluna-texto p {
+  margin-top: 15px;
+  color: #808080;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/* Section Sobre */
+section.sobre {
+  padding: 0;
+  padding-top: 80px;
+}
+
+.chamada-sobre {
+  text-align: center;
+}
+
+.chamada-sobre h2 {
+  color: #124265;
+}
+
+.chamada-sobre p {
+  font-size: 14px;
+  color: #808080;
+  margin: 20px 80px;
+}
+
+.conteudo-sobre {
+  display: flex;
+  margin: 25px 0 40px 0;
+}
+
+.conteudo-sobre p:not(:last-child) {
+  padding-right: 15px;
+}
+
+.conteudo-sobre p:not(:first-child) {
+  padding-left: 15px;
+}
+
+.conteudo-sobre p span {
+  width: 100;
+  color: #007bff;
+}
+
+#lista-itens {
+  margin-top: 10px;
+}
+
+.material-symbols-outlined {
+  margin: 0 0 0 10px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .diferenciais {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .diferencial-single {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
